@@ -1,5 +1,16 @@
 {
   "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^8.35.0",
+    "@typescript-eslint/parser": "^8.35.0",
+    "eslint": "^9.29.0",
+    "eslint-config-prettier": "^10.1.5",
+    "prettier": "^3.6.1",
     "typescript": "^5.8.3"
-  }
+  },
+  "name": "CBOR-LD-impl",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/Youngcircle-kim/CBOR-LD-impl.git",
+  "author": "youngcircle-kim <dudghks021121@gmail.com>",
+  "license": "MIT"
 }
