@@ -16,7 +16,8 @@ CBOR-LD implementation using typescript
 9. BitstringDecompressor : 압축 해제 구현
 
 ## Progress
-- [ ] JsonLdContextParser
+- [X] JsonLdContextLoader
+- [X] JsonLdContextParser
 - [ ] TypeTableBuilder
 - [ ] Canonicalizer
 - [ ] CBORCodec
