@@ -1,8 +1,8 @@
 import { init, loadContext } from './loader/contextLoader';
+import { parse } from './parser/parser';
 import type { CBORLDState } from './interfaces';
 
 async function main() {
-  // 1. 초기 상태 정의
   const state: CBORLDState = {
     strategy: 'compression',
     contextMap: new Map(),
@@ -12,10 +12,8 @@ async function main() {
     registryEntryId: 0,
   };
 
-  // 2. 초기화
   init(state);
 
-  // 3. JSON-LD 파일 불러오기
   const jsonld = {
     '@context': [
       'https://www.w3.org/2018/credentials/v1',
@@ -49,18 +47,15 @@ async function main() {
     },
   };
 
-  // 4. @context 처리
   const contexts = Array.isArray(jsonld['@context'])
     ? jsonld['@context']
     : [jsonld['@context']];
-
   for (const ctx of contexts) {
     await loadContext(state, ctx);
   }
 
-  // 5. 결과 출력
-  console.log('Term to ID Map:', Object.fromEntries(state.termToId));
-  console.log('Context Map Keys:', [...state.contextMap.keys()]);
+  const expanded = parse(jsonld, state);
+  console.log('Expanded JSON-LD:', JSON.stringify(expanded, null, 2));
 }
 
 main().catch(console.error);
