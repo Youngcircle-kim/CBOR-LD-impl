@@ -137,6 +137,14 @@ export function addContext(
     definition.protected = isProtected;
     termMap[term] = definition;
 
+    if (definition['@context']) {
+      const nestedCtx = definition['@context'];
+      const nestedContextKey = `${term}::nested`;
+      const nestedEntry = addContext(state, nestedCtx, nestedContextKey);
+
+      state.contextMap.set(nestedContextKey, nestedEntry.entry);
+    }
+
     if (!state.termToId.has(term) && state.idToTerm != undefined) {
       const termId = state.nextTermId;
       state.nextTermId += 2;
