@@ -43,3 +43,9 @@ CBOR-LD implementation using typescript
 3. Decode CBOR binary to canonicalized map.
 4. Replace integer keys with original terms using the type table.
 5. Reconstruct JSON-LD document.
+
+# Run command
+```shell
+yarn tsc src/playground.ts --downleveliteration --outDir dist
+node dist/playground.js
+```
