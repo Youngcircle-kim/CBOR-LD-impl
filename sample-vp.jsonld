@@ -1,0 +1,71 @@
+{
+  "@context": [
+    "https://www.w3.org/ns/credentials/v2",
+    "https://youngcircle-kim.github.io/context/v1/ticket-schema.json"
+  ],
+  "type": ["VerifiablePresentation"],
+  "verifiableCredential": [
+    {
+      "@context": [
+        "https://www.w3.org/ns/credentials/v2",
+        "https://youngcircle-kim.github.io/context/v1/ticket-schema.json"
+      ],
+      "id": "6c468803-8161-40cf-8ba0-941551479c2c",
+      "type": ["VerifiableCredential", "Ticket"],
+      "issuer": "did:sov:VV9pK5ZrLPRwYmotgACPkC",
+      "validUntil": "2025-05-12T04:49:55.867Z",
+      "validFrom": "2025-02-10T15:00:00.000Z",
+      "credentialSubject": {
+        "id": "did:sov:8Qw6PdG3RFJky21Xkuwyuh",
+        "ticketNumber": "824a58a7-31d5-4672-b3c3-22adc7584185",
+        "ticketToken": "vcData.reservedTicket.ticketToken",
+        "issuedBy": {
+          "name": "GD 단독 콘서트",
+          "id": "did:sov:VV9pK5ZrLPRwYmotgACPkC"
+        },
+        "priceCurrency": "KRW",
+        "totalPrice": 98000,
+        "ticketedSeat": [
+          {
+            "seatRow": "G",
+            "seatNumber": "30",
+            "seatSection": "Lower Bowl",
+            "seatingType": "ReservationSeat"
+          },
+          {
+            "seatRow": "G",
+            "seatNumber": "31",
+            "seatSection": "Lower Bowl",
+            "seatingType": "ReservationSeat"
+          }
+        ],
+        "underName": [
+          { "id": "did:sov:8Qw6PdG3RFJky21Xkuwyuh" },
+          { "id": "did:sov:J4BALc9uEa8F1GCy7uka7f" }
+        ]
+      },
+      "credentialStatus": [
+        {
+          "type": "BitstringStatusListEntry",
+          "statusPurpose": "revocation",
+          "statusListIndex": "1245",
+          "statusListCredential": "ipfs://QmcRaPQbgV5nTysChVMG44vZH6E21QiLb8zEMxJtDLvmtY"
+        }
+      ],
+      "proof": {
+        "type": "Ed25519Signature2020",
+        "created": "2025-05-12T04:49:55.886Z",
+        "proofPurpose": "assertionMethod",
+        "verificationMethod": "did:sov:VV9pK5ZrLPRwYmotgACPkC#keys-1",
+        "jws": "eyJhbGciOiJFZERTQSJ9.AdwMgeerwtHoh-l192l60hp9wAHZFVJbLfD_UxMi70cwnCAPZgoXD2YBJZCPEX3xKpRwcdOO8KpEHwJjyqOgzDO7iKvU8vcnwNrmxYbSW9ERBXukOXolLzeO_Jn"
+      }
+    }
+  ],
+  "holder": "did:sov:8Qw6PdG3RFJky21Xkuwyuh",
+  "proof": {
+    "type": "Ed25519Signature2020",
+    "created": "2025-05-18T10:45:44.971Z",
+    "verificationMethod": "did:sov:8Qw6PdG3RFJky21Xkuwyuh#key-1",
+    "jws": "eyJhbGciOiJFZERTQSJ9.AdwMgeerwtHoh-l192l60hp9wAHZFVJbLfD_UxMi70cwnCAPZgoXD2YBJZCPEX3xKpRwcdOO8KpEHwJjyqOgzDO7iKvU8vcnwNrmxYbSW9ERBXukOXolLzeO_Jn"
+  }
+}
